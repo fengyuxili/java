@@ -1,0 +1,21 @@
+server:
+  port: 8083
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        #git:
+        #  uri: file:D:\gitWork\config
+        #  searchPaths: base
+        native:
+          searchLocations: D:/gitWork/config/base
+  application:
+    name: config-server
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8082/eureka # Eureka Server注册服务的地址

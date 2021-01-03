@@ -1,0 +1,4 @@
+"DFGHJ".each {
+    println it
+}
+
